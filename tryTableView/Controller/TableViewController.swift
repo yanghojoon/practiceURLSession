@@ -62,7 +62,9 @@ class TableViewController: UITableViewController {
             }
             
             DispatchQueue.main.async {
-                cell.testImage.image = image
+                if indexPath == tableView.indexPath(for: cell) {
+                    cell.testImage.image = image
+                }
             }
         }
         task.resume()
