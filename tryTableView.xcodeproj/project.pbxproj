@@ -14,6 +14,7 @@
 		DE027C0F2786A53500829A11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE027C0D2786A53500829A11 /* LaunchScreen.storyboard */; };
 		DE027C172786A58500829A11 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE027C162786A58500829A11 /* TableViewController.swift */; };
 		DE027C192786A5CB00829A11 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE027C182786A5CA00829A11 /* TableViewCell.swift */; };
+		DE027C1E2786AA5000829A11 /* NetworkURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE027C1D2786AA5000829A11 /* NetworkURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DE027C102786A53500829A11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE027C162786A58500829A11 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		DE027C182786A5CA00829A11 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		DE027C1D2786AA5000829A11 /* NetworkURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,41 @@
 		DE027C012786A53400829A11 /* tryTableView */ = {
 			isa = PBXGroup;
 			children = (
+				DE027C1C2786AA2F00829A11 /* View */,
+				DE027C1B2786AA2000829A11 /* Controller */,
+				DE027C1A2786AA0800829A11 /* Namespace */,
 				DE027C022786A53400829A11 /* AppDelegate.swift */,
 				DE027C042786A53400829A11 /* SceneDelegate.swift */,
-				DE027C162786A58500829A11 /* TableViewController.swift */,
-				DE027C182786A5CA00829A11 /* TableViewCell.swift */,
-				DE027C082786A53400829A11 /* Main.storyboard */,
 				DE027C0B2786A53500829A11 /* Assets.xcassets */,
-				DE027C0D2786A53500829A11 /* LaunchScreen.storyboard */,
 				DE027C102786A53500829A11 /* Info.plist */,
 			);
 			path = tryTableView;
+			sourceTree = "<group>";
+		};
+		DE027C1A2786AA0800829A11 /* Namespace */ = {
+			isa = PBXGroup;
+			children = (
+				DE027C1D2786AA5000829A11 /* NetworkURL.swift */,
+			);
+			path = Namespace;
+			sourceTree = "<group>";
+		};
+		DE027C1B2786AA2000829A11 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE027C162786A58500829A11 /* TableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DE027C1C2786AA2F00829A11 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE027C182786A5CA00829A11 /* TableViewCell.swift */,
+				DE027C082786A53400829A11 /* Main.storyboard */,
+				DE027C0D2786A53500829A11 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +172,7 @@
 				DE027C032786A53400829A11 /* AppDelegate.swift in Sources */,
 				DE027C052786A53400829A11 /* SceneDelegate.swift in Sources */,
 				DE027C172786A58500829A11 /* TableViewController.swift in Sources */,
+				DE027C1E2786AA5000829A11 /* NetworkURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

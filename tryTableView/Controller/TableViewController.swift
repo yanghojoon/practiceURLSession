@@ -42,6 +42,30 @@ class TableViewController: UITableViewController {
             cell.backgroundColor = .clear
         }
         
+        guard let url = URL(string: NetworkURL.init(rawValue: indexPath.row % 3)!.url) else {
+            fatalError()
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            guard let httpResponse = response as? HTTPURLResponse,
+                  (200...299).contains(httpResponse.statusCode) else {
+                print("올바르지 않은 StatusCode")
+                return
+            }
+            guard let data = data, let image = UIImage(data: data) else {
+                print("데이터 변환 오류")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                cell.testImage.image = image
+            }
+        }
+        task.resume()
         
         return cell
     }
